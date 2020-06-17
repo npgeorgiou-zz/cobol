@@ -1,0 +1,9 @@
+version: '2'
+services:
+  cobol:
+    image: nginx:stable
+    build: ../../../Desktop
+    tty: true
+    volumes:
+      - ./:/app
+
