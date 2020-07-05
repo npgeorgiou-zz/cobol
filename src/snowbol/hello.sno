@@ -1,0 +1,47 @@
+copy 'foo/bar'.
+
+@author lala lala.
+@static foo int[3] <- 1.
+@static bar1 {
+  bar11 int[3] <- 1,
+  bar12 {
+    bar121 int[3] <- 1,
+    bar122 int[3] <- 1
+  }
+}.
+program hello {
+   baz1 int[5] {
+     isSmall when 1..5,
+     isBig when 5..100
+   }.
+
+   baz::isSmall <- true
+   if baz::isSmall {
+
+   }
+
+   static:bar1:bar11 <- 8.
+   static:foo <- foo * 3.
+   foo, baz <- 8.
+
+   static:foo <- accept().
+   baz2 int[5] <- accept().
+
+   qux1 {
+     qux11 float[3][2] <- 1.2,
+     qux12 {
+       qux121 int[3] <- 1
+     }
+   }.
+
+   display('foo is: %foo and I am happy').
+   display('foo is: %foo and I am happy', qux1).
+
+   hello2(baz).
+
+   program hello2(arg int[5]) {
+     display(static:invocationCount).
+     display(static:collection).
+     display(arg).
+   }
+}

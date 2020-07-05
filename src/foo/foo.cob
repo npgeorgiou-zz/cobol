@@ -5,6 +5,4 @@ data division.
   working-storage section.
 procedure division.
     display 'foo'.
-
-
 end program foo.
