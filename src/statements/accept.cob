@@ -11,5 +11,5 @@ data division.
       88 bar3 value 1.
 procedure division.
   accept foo.
-  accept foo from date yyyymmdd
+  accept foo from date yyyymmdd.
 end program foo.
