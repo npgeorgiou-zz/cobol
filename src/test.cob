@@ -4,9 +4,12 @@ environment division.
 data division.
   working-storage section.
   local-storage section.
-    1 boo.
-      2 boo2 pic a(3) value 000.
-procedure division.
-  display boo.
-  display boo2.
+  linkage section.
+    1 foo pic a(3) value 1.
+procedure division using foo.
+  display foo.
+  display foo.
+  display foo.
+  display foo.
+  display foo.
 end program foo.
