@@ -29,13 +29,16 @@ procedure division.
     or not not (not (person is numeric and (1 = 1 and 1 not=6)))
   )
     display 'yey'
+    if MALE display "####" end-if
+
   end-if.
 
   *> Condition
   *> Type
   *> Sign
   *> Comparison
-  if 1 is equal 1 display "JJJ" end-if.
+  if "1" = 1 display "QQQ" end-if.
+*>  if "1" not= 1 display "QQQ" end-if.
   if 1 + foo is equal 1 * 1 + (1/1 - 1) display "JJJ" end-if.
   if foo is equal 1 * 1 + (1/1 - 1) display "JJJ" end-if.
   if 1 is equal to 1 * 1 + (1/1 - 1) display "JJJ" end-if.
@@ -92,8 +95,6 @@ procedure division.
   *> TODO: Categorize if forms.
   *> TODO: Autompletion.
 
-
-
    if 1 + 1 is positive        then display "E", 1
    if (1 + 1) is positive      then display "E", 1
    if foo is positive          then display "E", 1
@@ -115,7 +116,5 @@ end program hello.
 
 *> TODO: Change CobolRenamesItemDecl_|CobolGroupItemDecl_|CobolConditionalItemDecl_ to same class with is* methods.
 *> TODO: commas in lists inspections are repetitive.
-
-
 
 *>copy 'statements/math.cob'.
