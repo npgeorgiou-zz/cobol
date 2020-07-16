@@ -11,8 +11,11 @@ data division.
      88 FEMALE value 10, 3, 4.
      88 BOTH value "A" through 10.
 procedure division.
-
   display person.
+  set MALE of person to true .
+*>  if person then
+*>    display "####"
+*>  end-if.
 
   if MALE display "####" end-if.
 
@@ -52,6 +55,7 @@ procedure division.
   if person is negative display "#" end-if.
   if (person is zero) display "#eeeeeeeeeeee" end-if.
 
+  if 1 + +1 is positive then display "#" end-if.
   if person positive then display "#" end-if.
   if person positive then display "#" else display "#" end-if.
   if person positive then display "#" else if person negative then display "#" end-if.
@@ -86,12 +90,26 @@ procedure division.
   if person not = 0 display "#" end-if.
 
   *> TODO: Categorize if forms.
-  *> TODO: Create quickfix from spam to >= etch.
   *> TODO: Autompletion.
 
 
-   if foo is positive then display "#", 1 else if person negative then display "#" else display "#" end-if.
 
+   if 1 + 1 is positive        then display "E", 1
+   if (1 + 1) is positive      then display "E", 1
+   if foo is positive          then display "E", 1
+   if foo is not positive      then display "E", 1
+   else if person negative     then display "E"
+   else if person not negative then display "E"
+   else if person is equal to zeros then display "E"
+   else if person not equal 0   then display "E"
+   else if person is equal to 1 + 1           then display "E"
+   else if person not equal 1 * 1 + (1/1 - 1) then display "E"
+   else if person is zero      then display "E"
+   else                         display "E"
+   end-if.
+
+   if foo greater than 1 - 1 * (3**7) display "E" end-if.
+   if foo is positive and foo is not positive or (foo less or equal 1 - 1 * (3**7)) display "E" end-if.
 
 end program hello.
 
@@ -99,3 +117,5 @@ end program hello.
 *> TODO: commas in lists inspections are repetitive.
 
 
+
+*>copy 'statements/math.cob'.

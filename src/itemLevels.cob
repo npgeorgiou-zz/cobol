@@ -45,11 +45,7 @@ data division.
       2 bar92 pic a(10).
     66 fgsdfsd renames bar91 through bar91.
     66 bar10 renames foo21 through foo22. *> TODO: Make an error for "rename must follow record foo2"
-
-
 procedure division.
-
-
 
 end program hello.
 
